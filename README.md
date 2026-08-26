@@ -41,6 +41,19 @@ npm run dev
 
 UI : `http://localhost:5173` (proxy vers le backend)
 
+## Démo en ligne (rendu navigateur)
+
+GitHub affiche le **code**, pas l’interface.
+
+Pour une URL publique qui ouvre directement l’écran « Réservation de stock » :
+
+1. Va sur [https://dashboard.render.com](https://dashboard.render.com)
+2. **New** → **Blueprint** → connecte le repo `AROU745/reservation`
+3. Render déploie via `render.yaml`
+4. Tu obtiens un lien du type : `https://stock-reservation-xxxx.onrender.com`
+
+Ce lien ouvre le même rendu que `localhost:5173`.
+
 ## API
 
 ### `GET /products`

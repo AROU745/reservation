@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: stock-reservation
+    runtime: node
+    plan: free
+    region: frankfurt
+    buildCommand: npm install --prefix backend && npm install --prefix frontend && npx --prefix backend prisma generate && npm run build --prefix frontend && npm run build --prefix backend
+    startCommand: cd backend && npx prisma migrate deploy && npx tsx prisma/seed.ts && NODE_ENV=production node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        value: file:./prisma/dev.db
