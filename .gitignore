@@ -1,0 +1,14 @@
+node_modules/
+dist/
+build/
+coverage/
+.env
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+.DS_Store
+Thumbs.db
+*.log
+.vite/
+STOCK-RESERVATION-submit.zip
